@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+body {
+    background-image: url("../images/veggie20toppings-1200x628.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: white;
+    background-color: black;
+    float: center;
+    opacity: 0.7;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 80px;
+    margin: 50px;
+}
+
+#p1 {
+    font-size: 26px;
+    background-color: black;
+    color: white;
+    width: 520px;
+    opacity: 0.7;
+}
+
+#p2 {
+    background-color: black;
+    color: white;
+    width: 620px;
+    opacity: 0.7;
+}
+
+#tittle {
+    margin: 150px;
+    float: left;
+    margin-left: 1px;
+}
+
+#form {
+    /* background-color: black;
+    opacity: 0.7; */
+    width: 320px;
+}
