@@ -36,13 +36,14 @@ $(document).ready(function() {
         this.sizeChoice = size;
         this.sizeCrust = crust;
         this.sizeTopping = toppings;
+        this.totalprice = total;
 
     }
-
     placeOrder.prototype.summary = function() {
 
         return "pizzasize: " + this.sizeChoice + ", crust:" + this.sizeCrust + ", toppings:" + this.sizeTopping;
     };
+
 
 
     $("#submit").click(function() {
@@ -60,28 +61,31 @@ $(document).ready(function() {
 
 
 
-        console.log(newSummary);
+        // console.log(newSummary);
 
         var anotherTopping = 0;
         for (var a = 0; a < toppings.length; a++) {
             anotherTopping += parseInt(toppings[a]);
 
         }
-        console.log(anotherTopping);
+        // console.log(anotherTopping);
+        // return anotherTopping;
         var total = parseInt(size) + parseInt(crust) + parseInt(anotherTopping);
-        alert('the pizza size ' + size + 'crust of your pizza ' + crust + 'topping of pizza ' + toppings + 'the total is ' + total);
-        return anotherTopping;
+        console.log(total);
+        // alert('the pizza size ' + size + 'crust of your pizza ' + crust + 'topping of pizza ' + toppings + 'the total is ' + total);
+        $("#total").text(total);
+    });
+
+    $("#summary").click(function() {
         var newSummary = [];
         newSummary.push(newOrder.summary());
-        $("#summary").click(function() {
-            alert("here is your summary " + newSummary);
-            // alert('here is your summary ' + newOrder.summary();
+        // alert("here is your summary " + newSummary);
+        alert('here is your summary ' + newOrder.summary());
 
-        });
 
     });
     $('#img').click(function() {
-        confirm("Do you want a delivery");
+
         alert("the delivery cost is 2000");
         var a = prompt("enter ur location");
         alert("your order will be delivered to" + a);
@@ -89,6 +93,7 @@ $(document).ready(function() {
 
 
 });
+
 
 
 
