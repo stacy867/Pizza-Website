@@ -20,54 +20,55 @@
             <p id="p1">UNIQUE AND DELICIOUS TASTES</p>
             <p id="p2">EASILY CHANGE AND ADD ANYTHING THAT YOU DESIRE </p>
         </div>
-        <form>
-            <div id="form">
-                <label><strong>choose the size of the pizza</strong><br>
-                        <select id="size">
-                            <option value="0">Open this to select the size</option>
-                            <option value="1000">small</option>
-                            <option value="1500">medium</option>
-                            <option value="2000">large</option>
-                        </select>
-                    </label><br><br>
+        <!-- <form> -->
+        <div id="form">
+            <label><strong>choose the size of the pizza</strong><br>
+                    <select id="size">
+                        <option value="0">Open this to select the size</option>
+                        <option value="1000" name="small">small</option>
+                        <option value="1500">medium</option>
+                        <option value="2000">large</option>
+                    </select>
+                </label><br><br>
 
-                <label><strong>Choose the crust of your pizza</strong><br>
-                        <select id="crust">
-                            <option>Open this to select the crust
-                            </option>
-                            <option value="1000">Crispy</option>
-                            <option value="1500">Stuffed</option>
-                            <option value="1200">Gluten Free</option>
-                        </select>
-                    </label><br><br>
-                <div id="topping">
-                    <label><strong>Choose the topings</strong><br>
-                            <input type="checkbox" id="small" name="scales"
-                                value="300" checked>
-                            <label>pepperoni</label><br>
-                    <input type="checkbox" id="small" name="scales" value="450" checked>
-                    <label>Mushrooms</label><br>
-                    <input type="checkbox" id="small" name="scales" value="500" checked>
-                    <label>Onions</label><br>
-                    <input type="checkbox" id="small" name="scales" value="540" checked>
-                    <label>sausage</label>
-                </div>
+            <label><strong>Choose the crust of your pizza</strong><br>
+                    <select id="crust">
+                        <option>Open this to select the crust
+                        </option>
+                        <option value="1000">Crispy</option>
+                        <option value="1500">Stuffed</option>
+                        <option value="1200">Gluten Free</option>
+                    </select>
+                </label><br><br>
+            <div id="topping">
+                <label><strong>Choose the topings</strong><br>
+                        <input type="checkbox" id="small" name="scales"
+                            value="300" checked>
+                        <label>pepperoni</label><br>
+                <input type="checkbox" id="small" name="scales" value="450" checked>
+                <label>Mushrooms</label><br>
+                <input type="checkbox" id="small" name="scales" value="500" checked>
+                <label>Onions</label><br>
+                <input type="checkbox" id="small" name="scales" value="540" checked>
+                <label>sausage</label>
+            </div>
 
 
-                <!-- <select id="topping">
+            <!-- <select id="topping">
                             <option>Open this to select the topping</option>
                             <option value="300">Pepperoni</option>
                             <option value="450">Mushrooms</option>
                             <option value="500"> Onions</option>
                             <option value="540"> Sausage</option>
                         </select> -->
-                </label><br><br>
-                <input id="submit" type="submit" value="PLACE ORDER">
-                <input type="submit" id="addmore" value="ADDMORE"><br><br>
-                <input type="submit" id="summary" value="SUMMARY">
+            </label><br><br>
+            <input id="submit" type="submit" value="PLACE ORDER">
+            <input type="submit" id="addmore" value="ADDMORE"><br>
+            <input type="submit" id="summary" value="SUMMARY">
 
-            </div>
-        </form>
+        </div>
+        <!-- </form> -->
+
 
         <div id="delivery">
 
@@ -79,7 +80,7 @@
         </div>
 
         <ul id="placeorderlist">
-            <li></li>
+
         </ul>
         <div id="pizza">
             <h2>you ordered the following:</h2>
