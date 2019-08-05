@@ -13,38 +13,42 @@
 </head>
 
 <body>
-    <div class="container">
+    <!-- <div class="container"> -->
+    <div class="row">
 
         <h1>STACY'S PIZZERIA</h1>
         <div id="tittle">
-            <p id="p1">UNIQUE AND DELICIOUS TASTES</p>
-            <p id="p2">EASILY CHANGE AND ADD ANYTHING THAT YOU DESIRE </p>
+            <strong><p id="p1">UNIQUE AND DELICIOUS TASTES</p></strong>
+            <strong><p id="p2">EASILY CHANGE AND ADD ANYTHING THAT YOU DESIRE
+            </p></strong>
         </div>
+    </div>
+    <div class=" second">
 
-        <div id="form">
+        <div id="form" class="card" class="col-md-6">
             <label><strong>choose the size of the pizza</strong><br>
-                    <select id="size">
-                        <option value="0">Open this to select the size</option>
-                        <option value="1000" name="small">small</option>
-                        <option value="1500">medium</option>
-                        <option value="2000">large</option>
-                    </select>
-                </label><br><br>
+                        <select id="size">
+                            <option value="0">Open this to select the size</option>
+                            <option value="1000">small</option>
+                            <option value="1500">medium</option>
+                            <option value="2000">large</option>
+                        </select>
+                    </label><br><br>
 
             <label><strong>Choose the crust of your pizza</strong><br>
-                    <select id="crust">
-                        <option>Open this to select the crust
-                        </option>
-                        <option value="1000">Crispy</option>
-                        <option value="1500">Stuffed</option>
-                        <option value="1200">Gluten Free</option>
-                    </select>
-                </label><br><br>
+                        <select id="crust">
+                            <option>Open this to select the crust
+                            </option>
+                            <option value="1000">Crispy</option>
+                            <option value="1500">Stuffed</option>
+                            <option value="1200">Gluten Free</option>
+                        </select>
+                    </label><br><br>
             <div id="topping">
                 <label><strong>Choose the topings</strong><br>
-                        <input type="checkbox" id="small" name="scales"
-                            value="300" checked>
-                        <label>pepperoni</label><br>
+                            <input type="checkbox" id="small" name="scales"
+                                value="300" checked>
+                            <label>pepperoni</label><br>
                 <input type="checkbox" id="small" name="scales" value="450" checked>
                 <label>Mushrooms</label><br>
                 <input type="checkbox" id="small" name="scales" value="500" checked>
@@ -66,9 +70,9 @@
 
             <img id="img" src="images/shipping-fast-512.png" height="60">
             <strong>
-                    <p>click on the icon to choose an option of delivery
-                        and you'll know the delivery charge.</p>
-                </strong>
+                        <p>click on the icon to choose an option of delivery
+                            and you'll know the delivery charge.</p>
+                    </strong>
         </div>
         <h2>you ordered the following:</h2>
         <ul id="placeorderlist">
@@ -76,6 +80,7 @@
         </ul>
         <p>The total is:</p>
         <p id="total"></p>
+    </div>
     </div>
 
 
