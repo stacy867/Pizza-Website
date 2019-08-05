@@ -30,7 +30,7 @@ $(document).ready(function() {
 
     //         '</div>' +
     //         '</form>');
-    // });
+
 
     function placeOrder(size, crust, toppings) {
         this.sizeChoice = size;
@@ -40,34 +40,12 @@ $(document).ready(function() {
     }
 
     placeOrder.prototype.summary = function() {
-        return this.sizeChoice + "," + this.sizeCrust + "," + this.sizeTopping;
+
+        return "pizzasize: " + this.sizeChoice + ", crust:" + this.sizeCrust + ", toppings:" + this.sizeTopping;
     };
-    var newSummary = [];
-
-    // var sizeChoice = [];
-    // $.each($("#size option:selected"), function() {
-    //         sizeChoice.push($(this.val())
-    //         });
-    //     for (var i = 0; i < sizeChoice.length; i++) {
-    //         console.log = (sizeChoice);
-    //     }
-
-    //     var sizeCrust = []; $.each($("#crust option:selected"), function() {
-    //         sizeCrust.push($(this("#crust")).val());
-    //     });
-    //     for (var j = 0; j < sizeCrust.length; j++) {
-    //         console.log = (sizeCrust);
-    //     }
 
 
-    // var sizeTopping = [];
-    // $.each($("#topping option:selected"), function() {
-    //     sizeTopping.push($(this("#topping")).val());
-    // });
-    // for (var k = 0; k < sizeTopping.length; k++) {
-    //     console.log = (sizeTopping);
-    // }
-    $("form").submit(function(event) {
+    $("#submit").click(function() {
         var size = $('#size').val();
         var crust = $('#crust').val();
         var toppings = [];
@@ -78,16 +56,11 @@ $(document).ready(function() {
 
         var newOrder = new placeOrder(size, crust, toppings);
         console.log(newOrder);
-
-
-        newSummary.push(newOrder.summary());
-
-        alert('the pizza size' + size + 'crust of your pizza' + crust + 'topping of pizza' + toppings);
+        $('ul#placeorderlist').append("<li>" + newOrder.summary() + "</li>");
 
 
 
-        // alert(newOrder.summary());
-        event.preventDefault();
+        console.log(newSummary);
 
         var anotherTopping = 0;
         for (var a = 0; a < toppings.length; a++) {
@@ -96,31 +69,36 @@ $(document).ready(function() {
         }
         console.log(anotherTopping);
         var total = parseInt(size) + parseInt(crust) + parseInt(anotherTopping);
-        alert('the total is ' + total);
+        alert('the pizza size ' + size + 'crust of your pizza ' + crust + 'topping of pizza ' + toppings + 'the total is ' + total);
         return anotherTopping;
+        var newSummary = [];
+        newSummary.push(newOrder.summary());
+        $("#summary").click(function() {
+            alert("here is your summary " + newSummary);
+            // alert('here is your summary ' + newOrder.summary();
 
-
-    });
-
-
-    $('ul#placeorderlist').append("<li><span>" + newOrder.summary() + "</span></li>");
-
-    $("#summary").submit(function() {
-        $("#pizza-size").text(placeOrder.size);
-        $("#pizza-crust").text(placeOrder.crust);
-        $("#pizza-topping").text(placeOrder.toppings);
+        });
 
     });
-
+    $('#img').click(function() {
+        confirm("Do you want a delivery");
+        alert("the delivery cost is 2000");
+        var a = prompt("enter ur location");
+        alert("your order will be delivered to" + a);
+    });
 
 
 });
 
 
 
-// $('select#size').val(); console.log() $('select#crust').val(); console.log() $('select#topping').val(); console.log;
 
 
 
 
-//BUSINESS LOGIC
+
+
+// $("#pizza-size").text(newOrder.sizeChoice);
+// $("#pizza-crust").text(newOrder.sizeCrust);
+// $("#pizza-topping").text(newOrder.sizeTopping);
+// });
